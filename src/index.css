@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Appmax Official Color Palette - DO NOT CHANGE */
+    
+    /* Primary Appmax Purple */
+    --appmax-primary: 265 92% 70%;
+    
+    /* Light Purple Gradients */
+    --appmax-light-1: 265 95% 76%;
+    --appmax-light-2: 265 95% 82%;
+    --appmax-light-3: 265 96% 88%;
+    --appmax-light-4: 265 75% 94%;
+    --appmax-light-5: 265 100% 98%;
+    
+    /* Dark Purple Contrasts */
+    --appmax-dark-1: 265 49% 53%;
+    --appmax-dark-2: 265 48% 40%;
+    --appmax-dark-3: 265 43% 34%;
+    --appmax-dark-4: 265 43% 20%;
+    --appmax-dark-5: 265 38% 11%;
+    
+    /* Grays */
+    --appmax-gray-1: 244 14% 69%;
+    --appmax-gray-2: 240 19% 85%;
+    --appmax-gray-3: 255 21% 94%;
+    
+    /* Cyan Accents */
+    --appmax-cyan-1: 190 100% 84%;
+    --appmax-cyan-2: 190 100% 92%;
+    
+    /* Theme mappings */
+    --background: 0 0% 100%;
+    --foreground: 265 43% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 265 43% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 265 43% 20%;
+
+    --primary: 265 92% 70%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 265 100% 98%;
+    --secondary-foreground: 265 43% 34%;
+
+    --muted: 255 21% 94%;
+    --muted-foreground: 244 14% 69%;
+
+    --accent: 190 100% 84%;
+    --accent-foreground: 265 43% 20%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 19% 85%;
+    --input: 240 19% 85%;
+    --ring: 265 92% 70%;
+
+    --radius: 0.75rem;
+
+    --chart-1: 265 92% 70%;
+    --chart-2: 265 95% 76%;
+    --chart-3: 265 95% 82%;
+    --chart-4: 190 100% 84%;
+    --chart-5: 265 49% 53%;
+  }
+
+  .dark {
+    --background: 265 38% 11%;
+    --foreground: 265 100% 98%;
+
+    --card: 265 43% 20%;
+    --card-foreground: 265 100% 98%;
+
+    --popover: 265 43% 20%;
+    --popover-foreground: 265 100% 98%;
+
+    --primary: 265 92% 70%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 265 43% 34%;
+    --secondary-foreground: 265 100% 98%;
+
+    --muted: 265 43% 34%;
+    --muted-foreground: 244 14% 69%;
+
+    --accent: 190 100% 84%;
+    --accent-foreground: 265 43% 20%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 265 100% 98%;
+
+    --border: 265 43% 34%;
+    --input: 265 43% 34%;
+    --ring: 265 92% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
