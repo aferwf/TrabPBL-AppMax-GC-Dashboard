@@ -39,17 +39,17 @@ export const EngagementChart = ({ readRate, clickRate, unopenedRate }: Engagemen
           Engajamento das Mensagens
         </CardTitle>
       </CardHeader>
-      <CardContent>
-        <ChartContainer config={chartConfig} className="h-[240px] md:h-[280px]">
+      <CardContent className="pb-2">
+        <ChartContainer config={chartConfig} className="h-[280px] sm:h-[320px] md:h-[340px]">
           <ResponsiveContainer width="100%" height="100%">
-            <PieChart>
+            <PieChart margin={{ top: 5, right: 5, bottom: 5, left: 5 }}>
               <Pie
                 data={chartData}
                 cx="50%"
-                cy="50%"
+                cy="45%"
                 labelLine={false}
                 label={false}
-                outerRadius="70%"
+                outerRadius="55%"
                 fill="hsl(var(--appmax-primary))"
                 dataKey="value"
               >
@@ -60,9 +60,10 @@ export const EngagementChart = ({ readRate, clickRate, unopenedRate }: Engagemen
               <ChartTooltip content={<ChartTooltipContent />} />
               <Legend 
                 verticalAlign="bottom"
-                height={36}
+                height={60}
                 iconType="circle"
-                formatter={(value) => <span className="text-sm text-foreground">{value}</span>}
+                wrapperStyle={{ paddingTop: '10px' }}
+                formatter={(value) => <span className="text-xs sm:text-sm text-foreground">{value}</span>}
               />
             </PieChart>
           </ResponsiveContainer>
