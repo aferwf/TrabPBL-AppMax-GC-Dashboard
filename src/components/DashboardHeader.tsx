@@ -7,7 +7,7 @@ interface DashboardHeaderProps {
 
 export const DashboardHeader = ({ lastUpdate }: DashboardHeaderProps) => {
   const handleOpenSheet = () => {
-    window.open('https://docs.google.com/spreadsheets/d/1B9D5E8p6gRZ6KlsTiJ-fAidfs5PopgJV/edit?usp=sharing&ouid=104334960109329441217&rtpof=true&sd=true', '_blank');
+    window.open('https://docs.google.com/spreadsheets/d/1gY6MkoUVgDj9KDKUgULgsa5PpucNDWZI/edit?usp=sharing&ouid=104334960109329441217&rtpof=true&sd=true', '_blank');
   };
 
   return (
