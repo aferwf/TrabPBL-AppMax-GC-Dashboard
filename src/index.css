@@ -113,4 +113,10 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+
+  canvas,
+svg {
+  max-width: 100% !important;
+  height: auto !important;
+}
 }

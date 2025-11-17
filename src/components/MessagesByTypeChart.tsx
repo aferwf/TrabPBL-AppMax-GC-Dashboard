@@ -56,7 +56,12 @@ export const MessagesByTypeChart = ({
         </CardTitle>
       </CardHeader>
       <CardContent className="pb-2">
-        <ChartContainer config={chartConfig} className="h-[280px] sm:h-[320px] md:h-[340px]">
+        <ChartContainer 
+  config={chartConfig} 
+  className="w-full"
+>
+  <div className="w-full h-[260px] sm:h-[280px] md:h-[300px]">
+
           <ResponsiveContainer width="100%" height="100%">
             <PieChart margin={{ top: 5, right: 5, bottom: 5, left: 5 }}>
               <Pie
@@ -84,6 +89,7 @@ export const MessagesByTypeChart = ({
               />
             </PieChart>
           </ResponsiveContainer>
+          </div>
         </ChartContainer>
       </CardContent>
     </Card>

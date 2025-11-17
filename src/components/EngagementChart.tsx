@@ -40,7 +40,11 @@ export const EngagementChart = ({ readRate, clickRate, unopenedRate }: Engagemen
         </CardTitle>
       </CardHeader>
       <CardContent className="pb-2">
-        <ChartContainer config={chartConfig} className="h-[280px] sm:h-[320px] md:h-[340px]">
+        <ChartContainer 
+  config={chartConfig} 
+  className="w-full"
+>
+  <div className="w-full h-[260px] sm:h-[280px] md:h-[300px]">
           <ResponsiveContainer width="100%" height="100%">
             <PieChart margin={{ top: 5, right: 5, bottom: 5, left: 5 }}>
               <Pie
@@ -59,14 +63,23 @@ export const EngagementChart = ({ readRate, clickRate, unopenedRate }: Engagemen
               </Pie>
               <ChartTooltip content={<ChartTooltipContent />} />
               <Legend 
-                verticalAlign="bottom"
-                height={60}
-                iconType="circle"
-                wrapperStyle={{ paddingTop: '10px' }}
-                formatter={(value) => <span className="text-xs sm:text-sm text-foreground">{value}</span>}
-              />
+  verticalAlign="bottom"
+  height={60}
+  iconType="circle"
+  wrapperStyle={{ paddingTop: "10px" }}
+  formatter={(value) => {
+    const configItem = chartConfig[value.toLowerCase()];
+    return (
+      <span className="text-xs sm:text-sm text-foreground">
+        {configItem?.label ?? value}
+      </span>
+    );
+  }}
+/>
+
             </PieChart>
           </ResponsiveContainer>
+          </div>
         </ChartContainer>
       </CardContent>
     </Card>
